@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490551513489",
+    "project_id": "loginnewsfragment",
+    "storage_bucket": "loginnewsfragment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490551513489:android:017655578c3b690d38ca30",
+        "android_client_info": {
+          "package_name": "com.vogella.android.fragmenttesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490551513489-35j3hfmr1gsajceqlfn4num3bcl538c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4VwirJ0ou7jKHsDRciJLRm-FHlJeMbuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490551513489-35j3hfmr1gsajceqlfn4num3bcl538c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

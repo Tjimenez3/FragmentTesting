@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/menu_french"
+        android:title="@string/french_title"
+        android:tooltipText="French"
+        />
+    <item
+        android:id="@+id/menu_english"
+        android:title="@string/english_title"
+        android:tooltipText="English"/>
+</menu>

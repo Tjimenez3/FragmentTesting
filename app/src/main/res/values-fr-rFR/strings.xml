@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Réglages</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Écran de connexion</string>
+    <string name="second_fragment_label">Écran d\'actualité</string>
+    <string name="third_fragment_label">Écran web</string>
+    <string name="fourth_fragment_label">Écran de détails</string>
+    <string name="next">Prochain</string>
+    <string name="previous">Précédent</string>
+
+    <string name="retrieval_error">Erreur, impossible de récupérer les données</string>
+    <string name="session_error">La session n\'est pas active</string>
+    <string name="email_error">Entrez une adresse e-mail correcte</string>
+    <string name="password_error">Votre mot de passe doit comporter au moins 6 caractères</string>
+    <string name="data_error">Un problème est survenu lors du chargement des données, veuillez réessayer</string>
+    <string name="email_hint">E-mail</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="submit_login">Soumettre</string>
+    <string name="english_title">Anglais</string>
+    <string name="french_title">Français</string>
+    <string name="navbar_label_1">Page 1</string>
+    <string name="navbar_label_2">Page 2</string>
+</resources>
