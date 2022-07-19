@@ -1,33 +1,17 @@
 package com.vogella.android.fragmenttesting
 
-import android.app.Application
-import android.app.Instrumentation
-import android.os.ParcelFileDescriptor.open
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.vogella.android.fragmenttesting.api.APIRequest
-import com.vogella.android.fragmenttesting.database.DatabaseService
 import com.vogella.android.fragmenttesting.entity.LoginResponse
 import com.vogella.android.fragmenttesting.entity.NewsItem
 import com.vogella.android.fragmenttesting.entity.NewsModel
-import com.vogella.android.fragmenttesting.repository.NewsRepositoryImpl
-import com.vogella.android.fragmenttesting.viewModel.AuthenticateViewModel
-import com.vogella.android.fragmenttesting.viewModel.NewsViewModel
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
 import org.junit.Assert.*
-import org.junit.Before
 import org.mockito.Mockito
-import java.io.InputStream
-import java.lang.RuntimeException
-import android.content.Context
-import android.hardware.Camera.open
-import androidx.test.platform.app.InstrumentationRegistry
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import java.io.File
-import java.nio.file.Files
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -66,7 +50,7 @@ class ExampleUnitTest {
         return mockAPIRequest.getNews()
     }
 
-    @Test()
+    @Test
     fun apiNewsRequest3() = runBlocking {
         val data = getLongNewsCall()
         assertTrue(data.articleList?.size!! > 0)
@@ -77,7 +61,7 @@ class ExampleUnitTest {
         val mockAPIRequest = Mockito.mock(APIRequest::class.java)
         val newsModel = readJSON2()
         Mockito.`when`(mockAPIRequest.getNews()).thenReturn(newsModel)
-        //read from the asset folder, NewsItem should be in Json file
+
         //create feature branch, make some changes, and then merge
         //read about pull request
 
@@ -98,22 +82,22 @@ class ExampleUnitTest {
     }
     @Test
     fun testJsonRead() {
-        var newsModel = readJSON()
+        val newsModel = readJSON()
         assertTrue(newsModel.status == "ok")
     }
 
-    private fun readJSON(): NewsModel{
-        var fileInString= File("/Users/tony/AndroidStudioProjects/FragmentTesting/app/src/main/assets/data.json").readText()
+    private fun readJSON(): NewsModel {
+        val fileInString =
+            File("/Users/tony/AndroidStudioProjects/FragmentTesting/app/src/main/assets/data.json").readText()
         val mapper = jacksonObjectMapper()
-        val newsModelFromJson = mapper.readValue<NewsModel>(fileInString)
-        return newsModelFromJson
+        return mapper.readValue(fileInString)
     }
 
-    private fun readJSON2(): NewsModel{
-        var fileInString= File("/Users/tony/AndroidStudioProjects/FragmentTesting/app/src/main/assets/data2.json").readText()
+    private fun readJSON2(): NewsModel {
+        val fileInString =
+            File("/Users/tony/AndroidStudioProjects/FragmentTesting/app/src/main/assets/data2.json").readText()
         val mapper = jacksonObjectMapper()
-        val newsModelFromJson = mapper.readValue<NewsModel>(fileInString)
-        return newsModelFromJson
+        return mapper.readValue(fileInString)
     }
 
 
