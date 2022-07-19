@@ -2,6 +2,7 @@ package com.vogella.android.fragmenttesting;
 
 import android.app.Application;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 
 import com.vogella.android.fragmenttesting.api.APIRequest;
 import com.vogella.android.fragmenttesting.api.Api;
@@ -24,26 +25,29 @@ public class App extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
-        super.onCreate();
         initApi();
         initFakeApi();
         initDatabase();
         initSharedPreferences();
+        super.onCreate();
     }
     private void initApi() {
+        mainApi = new Api(UrlConstant.BASE_URL).provideApiCall();
+
+    }
+    public static APIRequest getApi() {
         if(mainApi == null) {
             mainApi = new Api(UrlConstant.BASE_URL).provideApiCall();
         }
-    }
-    public static APIRequest getApi() {
         return mainApi;
     }
     private void initFakeApi() {
+        secondApi = new SecondApi(UrlConstant.BASE_FAKE_URL).provideFakeApiCall();
+    }
+    public static APIRequest getFakeApi() {
         if (secondApi == null) {
             secondApi = new SecondApi(UrlConstant.BASE_FAKE_URL).provideFakeApiCall();
         }
-    }
-    public static APIRequest getFakeApi() {
         return secondApi;
     }
     private void initDatabase() {

@@ -11,6 +11,7 @@ import com.vogella.android.fragmenttesting.repository.INewsRepository
 import com.vogella.android.fragmenttesting.database.DatabaseService
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.io.InputStream
 
 class NewsViewModel(private val repository: INewsRepository): ViewModel(){
 

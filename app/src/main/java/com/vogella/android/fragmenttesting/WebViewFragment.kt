@@ -34,13 +34,12 @@ class WebViewFragment : BaseFragment() {
 
 
         val stringUrl = sharedPreferences.getPreferencesString(PreferenceConstant.PREFERENCE_CONSTANT_STRING)
+
         with(binding.webView) {
             webViewClient = WebViewClient()
-            settings.javaScriptEnabled = true;
             settings.setSupportZoom(true)
             if (stringUrl != null) {
                 loadUrl(stringUrl.toString())
-                println(stringUrl.toString())
             }
             else {
                 loadUrl(DEFAULT_URL)

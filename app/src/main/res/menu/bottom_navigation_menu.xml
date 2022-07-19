@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <item
-        android:id="@+id/page_1"
-        android:icon="@drawable/ic_baseline_star_24"
-        android:title="@string/navbar_label_1"
-        app:labelVisibilityMode="labeled"
-        app:showAsAction="always"
-        />
-    <item
-        android:id="@+id/page_2"
-        android:icon="@drawable/ic_baseline_star_24"
-        android:title="@string/navbar_label_2"
-        app:labelVisibilityMode="labeled"
-        app:showAsAction="ifRoom"
-        />
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/page_1"
+    android:icon="@drawable/ic_baseline_star_24"
+    android:title="@string/navbar_label_1"
+    />
+<item
+    android:id="@+id/page_2"
+    android:icon="@drawable/ic_baseline_star_24"
+    android:title="@string/navbar_label_2"
+    />
 
 </menu>
